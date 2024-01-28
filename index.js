@@ -6,6 +6,8 @@ import cors from 'cors';
 import mongoose from './db.js';  // Import using ES module syntax
 import userRoute from './routes/userRoute.js';
 import { residencyRoute } from './routes/residencyRoute.js';
+import adminRoute from './routes/adminRoute.js'
+
 
 dotenv.config();
 
@@ -25,3 +27,4 @@ app.listen(PORT, () => {
 
 app.use('/api/user', userRoute);
 app.use('/api/residency', residencyRoute);
+app.use('/api/admin',adminRoute)
